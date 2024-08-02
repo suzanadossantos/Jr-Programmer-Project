@@ -12,7 +12,8 @@ public class ColorPicker : MonoBehaviour
     public System.Action<Color> onColorChanged;
 
     List<Button> m_ColorButtons = new List<Button>();
-    
+
+
     // Start is called before the first frame update
     public void Init()
     {
@@ -29,12 +30,13 @@ public class ColorPicker : MonoBehaviour
                     button.interactable = true;
                 }
 
-                newButton.interactable = false;
+                newButton.interactable = false; 
                 
                 onColorChanged.Invoke(SelectedColor);
             });
             
             m_ColorButtons.Add(newButton);
+           
         }
     }
 
